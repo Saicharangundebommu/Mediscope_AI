@@ -1,0 +1,11 @@
+{
+    "image_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope\\uploads\\1770002685_31.jpg",
+    "preprocessed_image": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope\\uploads\\enhanced_1770002685_31.jpg",
+    "raw_text": "Dr.AlfredSauls\n151212S.HighRd.,Chicago,IL23875\n954-555-1300\nName: Alan Johason.\n92Ibis Lane\npcinethylsuccinate\nRx:\nDisp:\n100 mil\nSig:\nmedication'is taken\nDr.Alfred'Sauls.\nDispense aswritten\nMay substitute,",
+    "cleaned_text": "Dr.AlfredSauls\n151212S.HighRd.,Chicago,IL23875\n954-555-1300\nName: Alan Johason.\n92Ibis Lane\npcinethylsuccinate\nRx:\nDisp:\n100 milliliter\nSig:\nmedication'is taken\nDr.Alfred'Sauls.\nDispense aswritten\nMay substitute,",
+    "medications": [],
+    "dosages": [],
+    "frequencies": [],
+    "routes": [],
+    "confidence": 94.4463711977005
+}

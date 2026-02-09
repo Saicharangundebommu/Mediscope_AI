@@ -1,0 +1,15 @@
+{
+    "image_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope_AI\\uploads\\1770645101_29.jpg",
+    "preprocessed_image": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope_AI\\uploads\\enhanced_1770645101_29.jpg",
+    "raw_text": "DD.FoM1289\n1 NOV 71\nDOD PRESCRIPTION\nFOR (Fult nane, addross& phone number lt under 12. give.age)\nJohnRDoe.HM3USN\nU.s.s. Neverforgotfen\n(DD(78)\nMEDICAL FACAITY\nDATE\nU.s.s:Neverforgotten (00.178)\n399\nR(Superscription)\ngm.or ml.\n(Inscription)\nTr .Billidanro\n15\nane\nImphogel, gsod\ni20\nme\n(Subscription)\nM$F Altwn\n(Signe)\np5mQ ld ac\nMFGR:\n.Wyeth\nEXP DATE:\n12/02\nLOTNOP39K/6\nFLLED BY:KM\nfackFrost\nICDR.MD.USIR\n10072\nR.NUMBEA\nSIGNATURE .AANK AND DEGREE\nEOTIONOFJAN.60 MAY 8EUSED FOR\nS/N 0102-LF-012-5201",
+    "cleaned_text": "DD.FoM1289\n1 NOV 71\nonce daily PRESCRIPTION\nFOR (Fult nane, addross& phone number lt under 12. give.age)\nJohnRDoe.HM3USN\nU.s.s. Neverforgotfen\n(DD(78)\nMEDICAL FACAITY\nDATE\nU.s.s:Neverforgotten (00.178)\n399\nR(Superscription)\ngm.or ml.\n(Inscription)\nTr .Billidanro\n15\nane\nImphogel, gsod\ni20\nme\n(Subscription)\nM$F Altwn\n(Signe)\np5mQ ld ac\nMFGR:\n.Wyeth\nEXP DATE:\n12/02\nLOTNOP39K/6\nFLLED BY:KM\nfackFrost\nICDR.MD.USIR\n10072\nR.nebivolol\nSIGNATURE .AANK AND DEGREE\nEOTIONOFJAN.60 MAY 8EUSED FOR\nS/N 0102-LF-012-5201",
+    "medications": [
+        "nebivolol"
+    ],
+    "dosages": [],
+    "frequencies": [
+        "once daily"
+    ],
+    "routes": [],
+    "confidence": 89.19401490374615
+}

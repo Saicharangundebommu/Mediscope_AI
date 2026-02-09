@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}OCR Results - MediScope AI{% endblock %}
+
+{% block custom_css %}
+{{ super() }}
+
+.section-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.prescription-text {
+    max-height: 280px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    line-height: 1.5;
+}
+
+.explanation-card {
+    background-color: #f9fbfc;
+    border-left: 4px solid #00DBDE;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+.explanation-title {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.explanation-text {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.medication-list li {
+    padding: 10px 14px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #FC00FF;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h1>OCR Results</h1>
+        <p class="lead">Prescription analysis completed successfully</p>
+    </div>
+
+    {% if results.error %}
+    <div class="alert alert-danger text-center">
+        <h5>Error</h5>
+        <p>{{ results.error }}</p>
+        <a href="/" class="btn btn-primary mt-2">Try Again</a>
+    </div>
+    {% else %}
+
+    <!-- Accuracy -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="section-title">Recognition Accuracy</span>
+            <span class="badge accuracy-badge">
+                {{ results.accuracy.overall_accuracy }}%
+            </span>
+        </div>
+        <div class="card-body">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">{{ results.accuracy.character_accuracy }}%</div>
+                    <div>Character</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">{{ results.accuracy.word_accuracy }}%</div>
+                    <div>Word</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">{{ results.accuracy.medication_accuracy }}%</div>
+                    <div>Medication</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Images & OCR Text -->
+    <div class="results-grid">
+        <div class="card">
+            <div class="card-header section-title">Original Prescription</div>
+            <div class="card-body text-center">
+                <img src="{{ original_image }}" class="img-fluid rounded" alt="Prescription Image">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header section-title">Extracted Text</div>
+            <div class="card-body">
+                <pre class="prescription-text">{{ results.raw_text }}</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cleaned Text & Medications -->
+    <div class="results-grid mt-4">
+        <div class="card">
+            <div class="card-header section-title">Cleaned & Normalized Text</div>
+            <div class="card-body">
+                <pre class="prescription-text">{{ results.cleaned_text }}</pre>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header section-title">Detected Medications</div>
+            <div class="card-body">
+                {% if results.medications %}
+                <ul class="medication-list">
+                    {% for med in results.medications %}
+                    <li>{{ med }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="text-muted">No medications detected</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical Explanations -->
+    <div class="card mt-4">
+        <div class="card-header section-title">
+            AI-Generated Medical Explanations
+        </div>
+        <div class="card-body">
+            {% if results.medical_explanations %}
+                {% for term, explanation in results.medical_explanations.items() %}
+                <div class="explanation-card">
+                    <div class="explanation-title">{{ term }}</div>
+                    <div class="explanation-text">{{ explanation }}</div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-muted">
+                    No explanations available for detected terms.
+                </p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="text-center my-5">
+        <a href="/" class="btn btn-primary me-2">Process Another</a>
+        <a href="/history" class="btn btn-outline-secondary me-2">View History</a>
+        <a href="/training" class="btn btn-outline-primary">Train Image</a>
+    </div>
+
+    {% endif %}
+</div>
+{% endblock %}

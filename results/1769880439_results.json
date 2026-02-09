@@ -1,0 +1,32 @@
+{
+    "image_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope\\uploads\\1769880439_9.jpg",
+    "preprocessed_image": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope\\uploads\\enhanced_1769880439_9.jpg",
+    "raw_text": "C.O.Jones\n25.El.Caro Street\nPleasantville,OH43320\nDate\nMarch102009\nPatient Name:\nJoseph McIntyre\nAddress:\nDOB:\n12/2/998\nAllergies:\nNKDA\nWeight:\n6s Kg\nRX:\nAzithromycin z00 mg/smL\nDay i: 15 mL\nDay 27.5 m\nDispense s mg/mL solution, 30 mL.\nRefills:0\nCO Jones,ARNP",
+    "cleaned_text": "C.O.Jones\n25.El.carvedilol Street\nPleasantville,OH43320\nDate\nMarch102009\nPatient Name:\nJoseph McIntyre\nAddress:\nDOB:\n12/2/998\nAllergies:\nNKDA\nWeight:\n6s Kg\nRX:\nazithromycin z00 mg/milliliter\nDay i: 15 mL\nDay 27.5 m\nDispense s mg/mL solution, 30 mL.\nRefills:0\nCO Jones,ARNP",
+    "medications": [
+        "azithromycin",
+        "carvedilol"
+    ],
+    "dosages": [
+        "15 mL",
+        "30 mL"
+    ],
+    "frequencies": [],
+    "routes": [],
+    "confidence": 93.9059622230984,
+    "is_trained": false,
+    "medical_explanations": {
+        "azithromycin": "the drug is called \"spiramycin.\" Azithromycin has been found effective in treating many infectious diseases and it may be useful as an anti-inflammatory agent for patients with rheumatoid arthritis (RA) or osteoarthritis (OA) who have high levels of interleukin 6 (IL-6).",
+        "carvedilol": "it can be said that the treatment of hypertension and angina pectoris are two different areas in cardiology with only one drug having both properties: beta-blocker therapy for heart failure (HF) or calcium channel blockers (CCBs) for coronary artery disease."
+    },
+    "preprocessed_url": "/results/enhanced_1769880439_9.jpg",
+    "accuracy": {
+        "character_accuracy": 93.0,
+        "word_accuracy": 94.5,
+        "medication_accuracy": 96.5,
+        "overall_accuracy": 95.0
+    },
+    "patient_name": "ggggg",
+    "doctor_name": "jjkkk",
+    "date": "2026-01-31"
+}

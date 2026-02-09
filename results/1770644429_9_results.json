@@ -1,0 +1,17 @@
+{
+    "image_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope_AI\\uploads\\1770644429_9.jpg",
+    "preprocessed_image": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Mediscope_AI\\uploads\\enhanced_1770644429_9.jpg",
+    "raw_text": "C.O.Jones\n25.El.Caro Street\nPleasantville,OH43320\nDate\nMarch102009\nPatient Name:\nJoseph McIntyre\nAddress:\nDOB:\n12/2/998\nAllergies:\nNKDA\nWeight:\n6s Kg\nRX:\nAzithromycin z00 mg/smL\nDay i: 15 mL\nDay 27.5 m\nDispense s mg/mL solution, 30 mL.\nRefills:0\nCO Jones,ARNP",
+    "cleaned_text": "C.O.Jones\n25.El.carvedilol Street\nPleasantville,OH43320\nDate\nMarch102009\nPatient Name:\nJoseph McIntyre\nAddress:\nDOB:\n12/2/998\nAllergies:\nNKDA\nWeight:\n6s Kg\nRX:\nazithromycin z00 mg/milliliter\nDay i: 15 mL\nDay 27.5 m\nDispense s mg/mL solution, 30 mL.\nRefills:0\nCO Jones,ARNP",
+    "medications": [
+        "azithromycin",
+        "carvedilol"
+    ],
+    "dosages": [
+        "30 mL",
+        "15 mL"
+    ],
+    "frequencies": [],
+    "routes": [],
+    "confidence": 93.9059622230984
+}
